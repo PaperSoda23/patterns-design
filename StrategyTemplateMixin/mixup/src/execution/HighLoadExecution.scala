@@ -3,12 +3,6 @@ package execution
 import template.Application
 
 trait HighLoadExecution extends Application {
-  override def execute(): Unit = {
-    println("execute high")
-    optimizeAssets()
-    startLoadBalancers()
-    addHighSecurity
-  }
-
-  private def addHighSecurity: Unit = println("add high security")
+  override def useLoadBalancers(): Unit = super.useLoadBalancers()
+  override def optimizeAssets(): Unit = super.optimizeAssets()
 }

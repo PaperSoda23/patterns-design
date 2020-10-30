@@ -1,14 +1,16 @@
 package template
 
 abstract class Application {
-  protected def secure(): Unit = {
-    applySecurityHeaders()
+  private def secure(): Unit = {
+    encryptCommunication()
+    performSecurityScan()
+    enableAttackWatcher()
     setupFirewall()
   }
 
-  protected def execute(): Unit = {
+  private def execute(): Unit = {
     optimizeAssets()
-    startLoadBalancers()
+    useLoadBalancers()
   }
 
   def start(): Unit = {
@@ -17,7 +19,11 @@ abstract class Application {
   }
 
   def optimizeAssets(): Unit = println("optimizing assets")
-  def startLoadBalancers(): Unit = println("start balancers")
+  def useLoadBalancers(): Unit = println("start balancers")
+
+
   def setupFirewall(): Unit = println("setup firewall")
-  def applySecurityHeaders(): Unit = println("add headers")
+  def encryptCommunication(): Unit = println("encrypt communication")
+  def performSecurityScan(): Unit = println("apply security")
+  def enableAttackWatcher(): Unit = println("enable attack watcher")
 }
