@@ -1,3 +1,3 @@
 package modern
 
-class Bear extends Swim with Run
+class Bear extends LivingCreature with Swim with Run

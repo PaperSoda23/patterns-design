@@ -1,3 +1,3 @@
 package modern
 
-class Seagull extends Fly with Swim with Run
+class Seagull extends LivingCreature with Fly with Swim with Run

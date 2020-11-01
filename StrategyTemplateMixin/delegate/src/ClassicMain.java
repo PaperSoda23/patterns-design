@@ -13,9 +13,16 @@ public class ClassicMain {
         var bear = new Bear(run, swim);
         var gull = new Seagull(fly, swim);
 
+        System.out.println("bear");
         bear.swim(20);
         bear.run(40);
+        bear.eat();
+
+        System.out.println("\n");
+
+        System.out.println("seagul");
         gull.fly(20);
         gull.swim(30);
+        gull.makeLove();
     }
 }

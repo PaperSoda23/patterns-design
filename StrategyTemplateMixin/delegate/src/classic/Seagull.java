@@ -3,7 +3,7 @@ package classic;
 import classic.behavior.Fly;
 import classic.behavior.Swim;
 
-public class Seagull implements IFlyer, ISwimmer {
+public class Seagull extends LivingCreature implements IFlyer, ISwimmer {
     private final Fly fly;
     private final Swim swim;
 

@@ -3,7 +3,7 @@ package classic;
 import classic.behavior.Run;
 import classic.behavior.Swim;
 
-public class Bear implements IRunner, ISwimmer {
+public class Bear extends LivingCreature implements IRunner, ISwimmer {
     private final Run run;
     private final Swim swim;
 
