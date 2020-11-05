@@ -1,7 +1,7 @@
 package com.dec.decorators;
 
 import com.dec.ChairDecorator;
-import com.dec.Direction;
+import com.dec.DirectionType;
 import com.dec.IChair;
 import com.dec.entity.ISitter;
 
@@ -53,8 +53,8 @@ public class BackrestChairDecorator extends ChairDecorator {
     }
 
     @Override
-    public void move(Direction direction, int distance) {
-        super.chair.move(direction, distance);
+    public int move(DirectionType direction, int distance) {
+        return super.chair.move(direction, distance);
     }
 
     @Override

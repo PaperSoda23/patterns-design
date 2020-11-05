@@ -1,9 +1,10 @@
 package com.dec;
 
 
+import com.dec.decorators.IWeightable;
 import com.dec.entity.ISitter;
 
-public class Chair implements IChair {
+public class Chair implements IChair, IWeightable {
     protected ISitter sitter = null;
     protected double weight;
 
@@ -13,18 +14,19 @@ public class Chair implements IChair {
         return true;
     }
 
-    public void move(Direction direction, int distance) {
-        System.out.println("moving chair in " + direction.toString() + " direction by " + distance) ;
+    @Override
+    public int move(DirectionType direction, int distance) {
+        if (weight > 30) return 30 * distance;
+        if (weight > 20) return 20 * distance;
+        return 10 * distance;
     }
 
     public void addWeight(double weight) {
         this.weight += weight;
     }
-
     public double getWeight() {
         return this.weight;
     }
-
     public boolean hasSitter() {
         return sitter != null;
     }

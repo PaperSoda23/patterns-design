@@ -1,7 +1,5 @@
 package com.dec.decorators.wheels;
 
-import com.dec.decorators.IChairPart;
-
-public interface IWheels extends IChairPart {
-    void ride(int distance);
+public interface IWheels {
+    int ride(int time);
 }

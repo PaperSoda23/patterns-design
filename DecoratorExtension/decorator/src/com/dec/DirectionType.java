@@ -1,6 +1,6 @@
 package com.dec;
 
-public enum Direction {
+public enum DirectionType {
     LEFT,
     RIGHT,
     UP,

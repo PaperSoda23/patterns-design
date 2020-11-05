@@ -1,5 +1,6 @@
 package com.dec.decorators;
 
 public interface IWeightable {
-    double weight = 0;
+    double getWeight();
+    void addWeight(double weight);
 }

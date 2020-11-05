@@ -1,11 +1,10 @@
 package com.dec;
 
+import com.dec.decorators.IWeightable;
 import com.dec.entity.ISitter;
 
-public interface IChair {
+public interface IChair extends IWeightable {
     boolean sitOn(ISitter sitter);
-    void move(Direction direction, int distance);
+    int move(DirectionType direction, int distance);
     boolean hasSitter();
-    void addWeight(double weight);
-    double getWeight();
 }

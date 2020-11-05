@@ -13,7 +13,7 @@ public class Main {
                 new WheelsChairDecorator(new Chair(), new BusinessWheels()), 90, 160);
         var officeChair = new WheelsChairDecorator(new Chair(), new HotWheels());
 
-        modernChair.move(Direction.RIGHT, 20);
+        modernChair.move(DirectionType.RIGHT, 20);
         modernChair.sitOn(new Person("Jack"));
         modernChair.lean(120);
         modernChair.setAngle(130);
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("\n");
 
         officeChair.sitOn(new Person("Frank"));
-        officeChair.move(Direction.LEFT, 40);
+        officeChair.move(DirectionType.LEFT, 40);
         System.out.println("weight: " + officeChair.getWeight());
         // can't lean
     }
