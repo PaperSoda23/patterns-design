@@ -15,7 +15,7 @@ public class Chair implements IChair, IExtendableChair, IWeightable {
 
 
     public Chair(double baseWeight) {
-        weight = baseWeight;
+        this.weight = baseWeight;
     }
 
 
@@ -31,11 +31,11 @@ public class Chair implements IChair, IExtendableChair, IWeightable {
     public int move(DirectionType directionType, int distance) {
         int time = 10;
 
-        if (weight > 20) {
+        if (this.weight > 20) {
             time =  20;
         }
 
-        if (weight > 30) {
+        if (this.weight > 30) {
             time = 30;
         }
 

@@ -22,6 +22,7 @@ public class Main {
         System.out.println("\n");
 
         officeChair.sitOn(new Person("Frank"));
+        
         officeChair.move(DirectionType.LEFT, 40);
         System.out.println("weight: " + officeChair.getWeight());
         // can't lean
